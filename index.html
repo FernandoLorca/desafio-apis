@@ -18,17 +18,25 @@
       <h1>Conversor de monedas Nacional</h1>
       <div class="converterWrapper">
         <h2>Pesos CLP</h2>
-        <input type="text" placeholder="Ingrese el monto en CLP" />
+        <input
+          type="number"
+          min="0"
+          placeholder="Ingrese el monto en CLP"
+          id="inputCLP"
+        />
         <p>Moneda a convertir:</p>
-        <select name="select" id="">
-          <option value="dolar">Dolar</option>
-          <option value="euro">Euro</option>
+        <select name="select" id="select">
+          <option value="none">Selecciona moneda</option>
+          <option value="dolar" id="optionDolar">Dolar</option>
+          <option value="euro" id="optionEuro">Euro</option>
         </select>
-        <button>Buscar</button>
-        <p>Resultado: <span>$31.5</span></p>
+        <button id="btnCalculate">Calcular</button>
+        <p>Resultado: <span id="result"></span></p>
       </div>
+      <div id="chartContainer"></div>
     </section>
 
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="./assets/js/app.js"></script>
   </body>
 </html>
